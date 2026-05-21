@@ -1,4 +1,5 @@
-# Emergency Triage Dataset - Gender Cleaning Project - Day 1
+# Emergency Triage Dataset 
+# Gender Cleaning Project - Day 1
 
 ## Project Workflow
 ### 1. Environment Setup
@@ -19,3 +20,19 @@ The original messy variables were substituted to the clean data without risking 
 * **`Notebook`**: The complete Python script with my step-by-step code and commentary.
 * **`EmergencyTriageDataset_Reduced_Dirty.csv`**: The uncleaned data file used for the pipeline.
   
+---
+# Respiratory Rate Data Cleaning - Day 2
+
+## Contributors
+* Tyler Baksh
+* Kaylah Leigertwood-Ollivierre
+* Mya Symister
+* Sariana Ramoutar
+* Zhanna McDonald
+* Sekou Ruddock
+
+## Project Workflow
+1. **Environment & Runtime Verification:** Asserting runtime stability using Python versions >= 3.10.
+2. **Numeric Cast Inspections:** Converting fields like Respiratory Rate (`RR`) using strict coercion constraints.
+3. **Data Quality Visualizations:** Exporting distributional trends (`rr_distribution.png`) before and after filtration sweeps.
+4. **Demographic Standardization:** Standardizing chaotic string variations within clinical records.

@@ -8,6 +8,7 @@ This repository documents a day by day clinical data engineering for an Emergenc
 - Day 3: Clinical Data Analysis & Visualisation
 - Day 4: Mean Arterial Pressure (MAP) Deep Dive
 - Day 5: Unconsidered Metrics - Oxygen Saturation ($SpO_2$)
+- Day 6: Emergency Department At-Risk Triage Model (Pseudocode)
 # Gender Cleaning Project - Day 1
 
 ## Project Workflow
@@ -98,7 +99,7 @@ through the systemic circulation. In the triage system, nurses use it as a cruci
 | **$> 100 - 110 \text{ mmHg}$** | **Elevated (High)** | Suggests excessive stress on the arteries and heart, which can eventually lead to blood clots or organ damage. |
 
 ---
-# Unconsidered Metrics - Peripheral Oxygen Saturation ($SpO_2$)
+# Unconsidered Metrics - Peripheral Oxygen Saturation ($SpO_2$) - Day 5
 
 ## Overview and Clinical Significance 
 
@@ -121,3 +122,85 @@ deteriorations that may not be noticeable by observation alone.
 | **$92\% - 94\%$** | **Borderline Abnormal** | Indicates that mild hypoxemia may be present, suggesting a potential need for supplemental oxygen. |
 | **$\le 92\%$** | **Hypoxemia (Abnormal)** | Indicates insufficient oxygen levels within the blood, requiring further clinical assessment. |
 | **$\le 88\%$** | **Critical** | Severe hypoxemia has occurred; the body's vital organs are actively being deprived of enough oxygen. |
+
+---
+# Emergency Department At-Risk Triage Model (Pseudocode) - Day 6
+
+## Physiological At-Risk Thresholds
+The model utilises predifined clinical thresholds based on standard physiological observations to determine whether a patient is at risk.
+
+| Indicator | At-Risk Range |
+| :--- | :--- |
+| **Oxygen Saturation ($SpO_2$)** | $< 92\%$ |
+| **Respiratory Rate (RR)** | $< 12$ OR $> 20$–$25$ breaths/min |
+| **Blood Pressure (BP)** | Systolic $130$–$139$ mmHg OR Diastolic $80$–$89$ mmHg |
+| **Heart Rate (HR)** | $< 60$ OR $> 100$ bpm |
+| **Temperature (°C)** | $< 35^\circ\text{C}$ OR $> 40^\circ\text{C}$ |
+| **Glasgow Coma Scale (GCS)** | $< 8$ |
+
+___
+
+## ED Triage Pseudocode 
+The following pseudocode shows the digital system process of patient data to assign a triage category.
+
+```text
+Collect:
+SpO2
+respiratory_rate
+systolic_BP
+Diastolic_BP
+heart_rate
+temp_c
+GCS
+
+SET triage_cat = "Standard"
+#------------------------------------------
+# Temp Conversion
+#------------------------------------------
+temp_f = (temp_c * 9/5) + 32
+#------------------------------------------
+# Respiratory
+#------------------------------------------
+IF Sp02 < 92 THEN
+triage_cat = "Critical"
+END IF
+IF respiratory_rate < 12 or respiratory_rate > 25 THEN
+triage_cat = "High Priority"
+END IF
+#------------------------------------------
+# Circulation
+#------------------------------------------
+IF systolic_BP < 130 or systolic_BP > 139
+OR Diastolic_BP < 80 or Diastolic_BP > 89 THEN
+triage_cat = "Elevated BP (monitor)"
+END IF
+IF heart_rate < 60 or heart_rate > 100 THEN
+triage_cat = "High Priority"
+END IF
+#------------------------------------------
+# Temperature
+#------------------------------------------
+IF temp_c < 35 OR temp_c > 40 THEN
+triage_cat = "Critical"
+END IF
+
+IF temp_f < 95 OR temp_f > 104 THEN
+triage_cat = "Critical"
+END IF
+#------------------------------------------
+# GCS
+#------------------------------------------
+IF GCS < 8 THEN
+triage_cat = "Critical
+END IF
+#------------------------------------------
+# Final assessment
+#------------------------------------------
+IF triage_cat = "Critical" THEN
+Patients receive medical attention
+ELSE IF triag_cat = "High Priority" THE
+Assign urgent review
+ELSE
+Continue standard triage assessment
+END IF
+END TRIAGE

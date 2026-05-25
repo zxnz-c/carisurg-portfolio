@@ -144,6 +144,8 @@ ___
 The following pseudocode shows the digital system process of patient data to assign a triage category.
 
 ```text
+START TRIAGE
+
 Collect:
 SpO2
 respiratory_rate

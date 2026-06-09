@@ -6,9 +6,10 @@ Welcome to my official **CariSurg** training portfolio. This respository is a ce
 The repository is organised by week to easily track deliverables.
 
 *   **`Week 0/`** - Inital program setup, Orientation, Onboarding & Python Readiness
+*   **`Week 1/`** - Research Fundamentals (Academic Papers & Preliminary Proposal)
 
 ## 🧫 About the Program
 The Carisurg program focuses on bridging computational workflows and technical training. This portfolio showcases my hands-on application and understanding of these concepts, beginning with core data foundations and scaling up to final program submissions. 
 
 ---
-*Maintained by [Z]*
+*Maintained by [Zhanna McDonald]*

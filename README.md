@@ -1,6 +1,16 @@
-# carisurg-portfolio
+# CariSurg Portfolio
 
 Welcome to my official **CariSurg** training portfolio. This respository is a centralised hub to document my progress, weekly assignments and milestones throughout the program.
+
+## Who is this for?
+This repo is maintained as part of the CariSurg MedTech Pathways program and is reviewed by program tutors. It also serves as a public record of my technical and engineering development.
+
+## How to install and run
+To clone the repository and install the necessary data science dependencies, run the following commands in your terminal:
+```bash
+git clone [https://github.com/zxnz-c/carisurg-portfolio.git](https://github.com/zxnz-c/carisurg-portfolio.git)
+cd carisurg-portfolio
+pip install -r requirements.txt
 
 ## 🧬 Portfolio Structure
 The repository is organised by week to easily track deliverables.

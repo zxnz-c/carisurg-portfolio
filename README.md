@@ -20,6 +20,3 @@ To clone the repository and install the necessary data science dependencies, run
 git clone [https://github.com/zxnz-c/carisurg-portfolio.git](https://github.com/zxnz-c/carisurg-portfolio.git)
 cd carisurg-portfolio
 pip install -r requirements.txt
-
----
-*Maintained by [Zhanna McDonald]*

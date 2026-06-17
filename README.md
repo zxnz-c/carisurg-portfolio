@@ -18,6 +18,8 @@ This repo is maintained as part of the CariSurg MedTech Pathways program and is 
 ## How to install and run
 To clone the repository and install the necessary data science dependencies, run the following commands in your terminal:
 ```bash
-git clone [https://github.com/zxnz-c/carisurg-portfolio.git](https://github.com/zxnz-c/carisurg-portfolio.git)
+```
+git clone https://github.com/zxnz-c/carisurg-portfolio.git
 cd carisurg-portfolio
 pip install -r requirements.txt
+```

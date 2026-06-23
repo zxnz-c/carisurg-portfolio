@@ -22,5 +22,4 @@
 ## Repository Artifacts Added This Week
 
 * `_CariSurg MedTech Pathways Research Project Preliminary Proposal - Zhanna McDonald - Week 3.docx`: The full proposal document, complete with an updated literature review and a quick terms glossary.
-* `Mercer General ED - Triage Process Flowchart - Final.drawio.png`: A clear process map showing the patient's journey and 5 specific spots where an AI tool could help.
 * `Workflow Notes and Constraints - Mercer General ED Triage Process_Week3Interim (1).pdf`: Notes explaining how the hospital's daily challenges guided the project design.

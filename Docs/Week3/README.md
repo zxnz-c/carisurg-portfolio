@@ -5,7 +5,6 @@
 ## What Was Accomplished This Week
 
 ### 1. Drafted the Preliminary Research Proposal
-* **Problem & Literature:** Outlined how seasonal rushes and staffing shortages affect triage at Mercer General and reviewed 10 hospital AI studie.
 * **Writing Improvements:** Polished the writing style and fixed the citation formatting so the text reads smoothly and naturally.
 
 ### 2. Formulated the Project Plan & Strategy

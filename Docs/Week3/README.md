@@ -14,7 +14,7 @@
 
 ### 3. Mapped the Hospital Workflow
 * **Process Flow:** Mapped out exactly how a patient moves through the emergency department from arrival to discharge.
-* **Real-World Barriers:** Highlighted three big problems in the current setup: writing vitals on paper first, severe night-shift shortages, and having to hunt down lab results manually.
+* **Real-World Barriers:** Highlighted three constraints in the current setup: writing vitals on paper first, night-shift shortages and having no automated result alerts.
 
 ---
 

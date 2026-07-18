@@ -1,0 +1,4 @@
+Model,Accuracy,ESI-1 Recall,Macro F1,Training Time (s),Prediction Time (ms/patient),Explainability
+Logistic Regression (Baseline),0.667,0.25,0.492,1.79,0.0051,High
+Random Forest (Baseline),0.641,0,0.392,15.51,0.0482,Medium
+Random Forest (Tuned),0.534,0.312,0.425,4.96,0.0164,Medium

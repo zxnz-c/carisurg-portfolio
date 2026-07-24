@@ -6,7 +6,7 @@ data:
   test_size: 0.2
 
 
-# columns excluded from the feature set (matches Week 6/7 notebook)
+# columns excluded from the feature set
 excluded_columns:
   demographics: ["age", "gender", "ethnicity", "race", "lang", "religion",
                  "maritalstatus", "employstatus", "insurance_status"]
@@ -18,7 +18,7 @@ final_model: "xgboost_tuned"
  
 models:
   xgboost_tuned:
-    # frozen — winner of the Week 6-7 model-selection process, see docs/model-selection.md
+    # frozen — model selection, see docs/model-selection.md
     objective: "multi:softprob"
     num_class: 5
     eval_metric: "mlogloss"

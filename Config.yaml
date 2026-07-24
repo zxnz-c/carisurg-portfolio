@@ -1,1 +1,37 @@
+seed: 42
 
+data:
+  raw_path: "data/yaleemmlc_admissionprediction_triage.csv"
+  target: "esi"
+  test_size: 0.2
+
+
+# columns excluded from the feature set (matches Week 6/7 notebook)
+excluded_columns:
+  demographics: ["age", "gender", "ethnicity", "race", "lang", "religion",
+                 "maritalstatus", "employstatus", "insurance_status"]
+  admin:        ["dep_name", "arrivalmode", "arrivalmonth", "arrivalday", "arrivalhour_bin"]
+  leakage:      ["disposition", "previousdispo"]
+ 
+# the only model this repo trains and serves — Week 7 recommendation
+final_model: "xgboost_tuned"
+ 
+models:
+  xgboost_tuned:
+    # frozen — winner of the Week 6-7 model-selection process, see docs/model-selection.md
+    objective: "multi:softprob"
+    num_class: 5
+    eval_metric: "mlogloss"
+    n_estimators: 300
+    max_depth: 3
+    learning_rate: 0.1
+    subsample: 0.7
+    colsample_bytree: 0.8
+    min_child_weight: 1
+    gamma: 0.1
+    random_state: 42
+    class_weight_strategy: "balanced"   # applied via sample_weight, not class_weight (XGBoost has no class_weight param)
+ 
+paths:
+  model_out: "w8_xgboost_final.joblib"
+  benchmark_table: "docs/model-selection.csv"

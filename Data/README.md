@@ -1,6 +1,6 @@
 # Data
 
-This directory is used to store local datasets used throughout the CariSurg program.
+This directory is used to store local datasets and figures created used throughout the CariSurg program.
 
 It is intentionally excluded from version control via `.gitignore` to avoid committing large or sensitive files.
 

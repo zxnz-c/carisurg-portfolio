@@ -18,6 +18,7 @@ Clearly state the final model and why it was chosen.
 Provide the commands required to set up and train the model:
 
 ```bash
-git clone ...
+git clone https://github.com/zxnz-c/carisurg-portfolio.git
 pip install -r requirements.txt
 python scripts/train.py --config config.yaml
+pytest

@@ -14,7 +14,7 @@ Models evaluated across Weeks 6–7, from `notebooks/Model_Optimisation_Techniqu
 | HistGradientBoosting (Tuned) | `max_iter=300`, `max_depth=None`, `min_samples_leaf=10`, `l2_regularization=0.5` | 0.312 | 0.436 | 0.0086 |
 | MLP (64,32) | `alpha=1e-3`, `max_iter=500` | 0.188 | 0.457 | 0.0055 |
 
-**Pinned finalist: XGBoost (Tuned).** Reasoning: `*.
+**Pinned finalist: XGBoost (Tuned).** Reasoning: Week 7 Decision Journal [https://github.com/zxnz-c/carisurg-portfolio/blob/main/Docs/Week7/Decision_Journal.md].
 
 ---
 

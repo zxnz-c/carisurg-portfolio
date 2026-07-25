@@ -8,8 +8,8 @@ Models evaluated across Weeks 6–7, from `notebooks/Model_Optimisation_Techniqu
 | Logistic Regression (Baseline) | `max_iter=1000` | 0.250 | 0.492 | 0.0017 |
 | Random Forest (Baseline) | `n_estimators=300`, `class_weight=balanced_subsample` | 0.000 | 0.392 | 0.0985 |
 | Random Forest (Tuned) | `n_estimators=500`, `max_depth=20`, `min_samples_leaf=1`, `min_samples_split=5`, `max_features=log2` | 0.312 | 0.425 | 0.0241 |
-| XGBoost (Baseline) | `n_estimators=300`, default depth/lr, trained w/ balanced `sample_weight` | 0.250 | 0.493 | 0.0081 |
-| **XGBoost (Tuned)** | `n_estimators=300`, `max_depth=3`, `learning_rate=0.1`, `subsample=0.7`, `colsample_bytree=0.8`, `min_child_weight=1`, `gamma=0.1`, trained w/ balanced `sample_weight` | 0.312 | 0.435 | 0.0062 |
+| XGBoost (Baseline) | `n_estimators=300`, default depth, trained with balanced `sample_weight` | 0.250 | 0.493 | 0.0081 |
+| **XGBoost (Tuned)** | `n_estimators=300`, `max_depth=3`, `learning_rate=0.1`, `subsample=0.7`, `colsample_bytree=0.8`, `min_child_weight=1`, `gamma=0.1`, trained with balanced `sample_weight` | 0.312 | 0.435 | 0.0062 |
 | HistGradientBoosting (Baseline) | `max_depth=6`, `learning_rate=0.1`, `max_iter=300` | 0.312 | 0.404 | 0.0041 |
 | HistGradientBoosting (Tuned) | `max_iter=300`, `max_depth=None`, `min_samples_leaf=10`, `l2_regularization=0.5` | 0.312 | 0.436 | 0.0086 |
 | MLP (64,32) | `alpha=1e-3`, `max_iter=500` | 0.188 | 0.457 | 0.0055 |

@@ -46,26 +46,44 @@ https://github.com/zxnz-c/carisurg-portfolio/blob/main/Docs/Week7/Decision_Journ
 ## 3. Running the Project
 
 ```bash
-git clone [https://github.com/zxnz-c/carisurg-portfolio.git](https://github.com/zxnz-c/carisurg-portfolio.git)
+# Clone repository
+git clone https://github.com/zxnz-c/carisurg-portfolio.git
+cd carisurg-portfolio
+
+# Create virtual environment (this is optional)
+python -m venv .venv
+
+# Activate environment
+# Windows
+.venv\Scripts\activate
+
+# macOS/Linux
+# source .venv/bin/activate
+
+# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
+
+# Preprocess data
+python scripts/preprocess.py
+
+# Train model
 python scripts/train.py --config config.yaml
+
+# Run tests
 pytest
 
 ```
 
 This will:
-
 * Create the environment
 * Load and preprocess the data
 * Train the selected model
 * Run tests to confirm the pipeline is functioning
 
 ---
-
 ## 4. Data Governance
-
 ### Purpose
-
 Ensure safe, compliant, and reproducible handling of triage data.
 
 ### Data Sources

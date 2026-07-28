@@ -1,10 +1,15 @@
-"""Entry point for training the XGBoost (Tuned) model end to end.
 
-Run with: python train.py --config config.yaml
+"""Entry point for training the XGBoost (Tuned) model end to end.
+ 
+Run with: python scripts/train.py --config config.yaml
+(from the repo root)
 """
 
 import time
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import joblib
 from sklearn.model_selection import train_test_split

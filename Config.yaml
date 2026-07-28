@@ -1,7 +1,7 @@
 
 seed: 42
 data:
-  raw_path: "data/yaleemmlc_admissionprediction_triage.csv"
+  raw_path: "Data/Datasets/PLACE_YOUR_DATASET_HERE.csv"
   target: "esi"
   test_size: 0.2
 models:

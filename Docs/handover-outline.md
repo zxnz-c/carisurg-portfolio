@@ -161,5 +161,3 @@ carisurg-portfolio/
 * The model can be retrained end‑to‑end in under an hour.
 * For questions about triage data or preprocessing, refer to `src/data.py`.
 * For model behaviour or tuning, refer to `notebooks/Model_Optimisation_Techniques_FINAL.ipynb`.
-
-```

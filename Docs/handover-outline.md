@@ -45,34 +45,57 @@ https://github.com/zxnz-c/carisurg-portfolio/blob/main/Docs/Week7/Decision_Journ
 
 ## 3. Running the Project
 
+# Getting Started
+
+## Clone the repository
+
 ```bash
-# Clone repository
 git clone https://github.com/zxnz-c/carisurg-portfolio.git
 cd carisurg-portfolio
+```
 
-# Create virtual environment (this is optional)
+## Create a virtual environment (optional)
+
+```bash
 python -m venv .venv
+```
 
-# Activate environment
-# Windows
+## Activate the virtual environment
+### Windows
+```bash
 .venv\Scripts\activate
+```
+### macOS/Linux
+```bash
+source .venv/bin/activate
+```
 
-# macOS/Linux
-# source .venv/bin/activate
+## Install dependencies
 
-# Install dependencies
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
+## Dataset
 
-# Preprocess data
-python scripts/preprocess.py
+This project uses the **Yale EMMLC Emergency Department Triage Dataset**, which is **not included** in this repository due to data governance.
+Before training the model:
+1. Obtain the dataset through the appropriate approval and access process.
+2. Place the dataset at:
 
-# Train model
+```text
+Data/Datasets/PLACE_YOUR_DATASET_HERE.csv
+```
+Alternatively, update the `raw_path` value under the `data:` section in `config.yaml` to point to your dataset location.
+> **Note:** If the dataset cannot be found at the configured path, `scripts/train.py` will raise a `FileNotFoundError` indicating the missing file.
+
+## Train the model
+```bash
 python scripts/train.py --config config.yaml
-
-# Run tests
-pytest
-
+```
+## Run the test suite
+```bash
+PYTHONPATH=. pytest tests/
 ```
 
 This will:
@@ -87,7 +110,6 @@ This will:
 Ensure safe, compliant, and reproducible handling of triage data.
 
 ### Data Sources
-
 * `yaleemmlc_admissionprediction_triage.csv` — raw triage dataset
 * `triage_cleaned_v1.csv` — cleaned dataset
 * `modelling_table.csv` — engineered‑feature dataset
@@ -149,21 +171,21 @@ Ensure safe, compliant, and reproducible handling of triage data.
 ```
 carisurg-portfolio/
 │
-├── data/                      # raw, cleaned, engineered datasets
+├── Data/                      # raw, cleaned, engineered datasets
 ├── src/                       # modular Python source code
 │   ├── data.py                # loading & cleaning
 │   ├── models.py              # model wrappers
-│   ├── evaluation.py          # metrics & evaluation
+│   ├── features.py          # metrics 
 │   └── utils.py               # helpers
 │
 ├── scripts/
-│   ├── preprocess.py          # data cleaning pipeline
 │   └── train.py               # training pipeline
+├── test/
+│   └── test_pipeline.py               # testing pipeline
 │
 ├── notebooks/                # exploratory work
 │   ├── Week7/
 │   └── Week8/
-├── models/                    # saved model artefacts
 ├── Docs/
 │   ├── Week7/
 │   └── Week8/
@@ -173,7 +195,7 @@ carisurg-portfolio/
 
 ---
 
-## 7. Contact & Handover Notes
+## 6. Contact & Handover Notes
 
 * All scripts are reproducible using the commands in Section 3.
 * The model can be retrained end‑to‑end in under an hour.

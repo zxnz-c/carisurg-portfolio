@@ -26,10 +26,8 @@ VITALS = [
 
 
 def select_features(df: pd.DataFrame, target: str):
-    """Selects model features, excluding leakage, admin, and demographic columns.
-    """
     exclude = set(LEAKAGE) | set(ADMIN) | set(DEMOGRAPHICS) | {target}
-    feature_cols = [c for c in df.columns if c in VITALS and c not in exclude]
+    feature_cols = [c for c in df.columns if c not in exclude]
     return df[feature_cols], df[target]
 
 
